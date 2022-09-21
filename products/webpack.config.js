@@ -1,5 +1,5 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
 module.exports = {
   mode: 'development',
@@ -13,6 +13,7 @@ module.exports = {
       exposes: {
         './ProductsIndex': './src/index'
       },
+      shared: ['faker']
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html'
